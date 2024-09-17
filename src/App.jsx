@@ -12,6 +12,7 @@ function App() {
       try {
         const data = await fetchWeatherData();
         if (data) {
+          setError(null); 
           setWeatherData(data);
           console.log(data)
         } else {
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <>
-    <h1>תחזית מסביב לעולם</h1>
+    <h1 className="title">תחזית מסביב לעולם</h1>
     <div className="app">
       {weatherData.map((cityWeather) => (
         <WeatherCard

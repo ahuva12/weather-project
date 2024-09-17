@@ -13,8 +13,6 @@ body {
 .error-message {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
   text-align: center;
   background-color: #f8d7da;
@@ -24,6 +22,9 @@ body {
   font-size: 18px;
 }
 
+.title{
+  color: #0e044d;
+}
 
 .app {
   display: flex;
@@ -40,12 +41,11 @@ body {
   background-color: rgba(255, 255, 255, 0.8); 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: calc(50% - 20px); /* כל כרטיס יתפוס 50% מהרוחב של השורה, עם הפחתת מרווח של 20px */
+  width: calc(50% - 20px);
   padding: 20px;
   text-align: center;
-  justify-content: center; /* מרכז את הכרטיסים אופקית */
   transition: transform 0.3s ease;
-  box-sizing: border-box; /* כולל padding ו-border בתוך הרוחב */
+  box-sizing: border-box; 
 }
 
 .weather-card:hover {
@@ -74,6 +74,14 @@ body {
     width: calc(100% - 20px); /* כל כרטיס יתפוס את כל הרוחב של השורה במסכים קטנים */
     max-width: none; /* מבטל את הרוחב המקסימלי */
   }
+}
+
+.weather-icon {
+  width: 30px; /* שינוי רוחב התמונה ל-30 פיקסלים */
+  height: auto; /* שמירה על פרופורציות התמונה */
+  display: inline-block; /* תצוגה בתוך שורה עם טקסט */
+  vertical-align: middle; /* יישור אנכי של התמונה עם הטקסט */
+  margin-left: 10px; /* רווח בין התמונה לטקסט */
 }
 
 /* לדאוג למרכוז של הברטיסים
