@@ -41,7 +41,7 @@ function App() {
   return (
     <>
     <h1 className="title">תחזית מסביב לעולם</h1>
-    <div className="app">
+    <div className="weather-container">
       {weatherData.map((cityWeather) => (
         <WeatherCard
           key={cityWeather.id}
@@ -56,6 +56,52 @@ function App() {
       ))}
     </div>
     </>
+
+    // <>
+    //  <h1 className="title">תחזית מסביב לעולם</h1>
+    //  <div className="weather-container">
+    //  <WeatherCard
+    //        key={1}
+    //        city={"אילת"}
+    //        weather={{
+    //          description: "חם מאוד",
+    //          temp: 30,
+    //          feels_like: 35,
+    //          humidity: 56,
+    //        }}
+    //      />
+    //   <WeatherCard
+    //     key={2}
+    //     city={"לומדון"}
+    //     weather={{
+    //       description: "חם בצורה סבירה",
+    //       temp: 24,
+    //       feels_like: 25,
+    //       humidity: 30,
+    //     }}
+    //   />
+    //   <WeatherCard
+    //     key={3}
+    //     city={"ניו יורק"}
+    //     weather={{
+    //       description: "נורמלי עד קריר",
+    //       temp: 20,
+    //       feels_like: 20,
+    //       humidity: 22,
+    //     }}
+    //   />
+    //   <WeatherCard
+    //     key={4}
+    //     city={"אלסקה"}
+    //     weather={{
+    //       description: "קפוא ביותר",
+    //       temp: 1,
+    //       feels_like: 2,
+    //       humidity: 10,
+    //     }}
+    //   />
+    //  </div>
+    // </>
   );
 }
 

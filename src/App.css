@@ -1,13 +1,27 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  position: relative; 
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url('./assets/img.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  background-attachment: fixed; 
-  font-family: Arial, sans-serif; 
-  margin: 0;
-  padding: 0;
-  text-align: center;
+  z-index: -1; 
 }
 
 .error-message {
@@ -22,11 +36,16 @@ body {
   font-size: 18px;
 }
 
-.title{
+.title {
   color: #0e044d;
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);  
+  width: 100%;
 }
 
-.app {
+.weather-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
@@ -35,6 +54,11 @@ body {
   min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto; 
+  position: absolute;
+  top: 15%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 100%; 
 }
 
 .weather-card {
@@ -71,18 +95,15 @@ body {
 
 @media (max-width: 768px) {
   .weather-card {
-    width: calc(100% - 20px); /* כל כרטיס יתפוס את כל הרוחב של השורה במסכים קטנים */
-    max-width: none; /* מבטל את הרוחב המקסימלי */
+    width: calc(100% - 20px); 
+    max-width: none; 
   }
 }
 
 .weather-icon {
-  width: 30px; /* שינוי רוחב התמונה ל-30 פיקסלים */
-  height: auto; /* שמירה על פרופורציות התמונה */
-  display: inline-block; /* תצוגה בתוך שורה עם טקסט */
-  vertical-align: middle; /* יישור אנכי של התמונה עם הטקסט */
-  margin-left: 10px; /* רווח בין התמונה לטקסט */
+  width: 30px; 
+  height: auto; 
+  display: inline-block;
+  vertical-align: middle; 
+  margin-left: 10px; 
 }
-
-/* לדאוג למרכוז של הברטיסים
-לדאוג לאייקונים */
